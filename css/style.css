@@ -2,3 +2,22 @@
 
 @import url('/css/setting.css');
 @import url('/css/variable.css');
+
+/* 헤더 */
+header.mainpage{}
+
+
+
+header{display: flex; justify-content: space-between; padding: 35px 30px;}
+h2.header--logo{width: 175px; height: 29px; background: #000;}
+h2.header--logo > a{width: 100%; height:100%; display: inline-block;}
+h2.header--logo > a > img{width: 100%; height:100%;}
+
+ul.header--gnb{display: flex; gap: var(--vw-40px);}
+.header--gnb-li > a{font-size: var(--fz18); color: var(--bk111); white-space: nowrap;}
+
+
+
+
+.header--icon-set > button{padding: 4px;}
+.header--icon-set > button > svg{width: 20px; height: 20px;}

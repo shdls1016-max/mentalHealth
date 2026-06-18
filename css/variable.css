@@ -1,1 +1,32 @@
 @charset "UTF-8";
+
+:root{
+    /* 컬러 */
+    --point-color:#ff8138;
+    --point-color-hover:#ff6f1c;
+
+    --bk111:#111;
+    --bk333:#333;
+    --bk555:#555;
+
+    --wh1:#fff;
+    --wh2:#fffdf9;
+
+    --main-color:#bba90;
+    --bg-f6:#F6F6F6;
+    --bg-footer:#484136;
+    --bd1:#CFCFCF;
+    --bd2:#999;
+
+    /* 폰트크기 */
+    --sectionTitle:30px;
+    --fz20:20px;
+    --fz18:18px;
+    --fz14:14px;
+
+    --deco-fz32:32px;
+    --deco-fz50:50px;
+
+    --vw-40px:2vw;
+
+}

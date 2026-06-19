@@ -12,7 +12,7 @@
     --wh1:#fff;
     --wh2:#fffdf9;
 
-    --main-color:#bba90;
+    --main-color:#bba990;
     --bg-f6:#F6F6F6;
     --bg-footer:#484136;
     --bd1:#CFCFCF;
@@ -24,8 +24,26 @@
     --fz18:18px;
     --fz14:14px;
 
+    --sectionTitle:1.56vw;
+    --fz20-mid:1vw;
+    --fz18-mid:0.93vw;
+    --fz14-mid:14px;
+
+
+    --sectionTitle:25px;
+    --fz20-min:17px;
+    --fz18-min:15px;
+    --fz14-min:12px;
+
+
     --deco-fz32:32px;
     --deco-fz50:50px;
+
+    --deco-fz32-mid:1.66vw;
+    --deco-fz50-mid:2.6vw;
+
+    --deco-fz32-min:27px;
+    --deco-fz50-min:40px;
 
     --vw-40px:2vw;
 

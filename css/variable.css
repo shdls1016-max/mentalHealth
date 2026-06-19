@@ -47,4 +47,8 @@
 
     --vw-40px:2vw;
 
+    /* 슬라이드스와이퍼 */
+    --swiper-navigation-color:#bba990;
+    --swiper-theme-color:#fff5e2;
+    --swiper-pagination-bullet-inactive-color:#fff;
 }

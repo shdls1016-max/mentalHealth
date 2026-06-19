@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>온밤정신건강의학과</title>
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-myeongjo.css" rel="stylesheet">   <!-- 나눔명조  CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/action.js" defer></script>
+    
     
 </head>
 <body>
@@ -71,25 +73,62 @@
     
 
 
-        <ul class="hero-set">
-            <li class="hero">
-                <div class="hero--float-box">
-                    <div class="hero--float-box-txt">
-                        <span>마음의 안식을 찾는 첫 걸음,</span>
-                        <div class="hero--float-box-txt2">
-                            <span>온밤</span>
-                            <span>이 함께 하겠습니다.</span>
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hero hero1">
+                    <div class="hero--float-box">
+                        <div class="hero--float-box-txt">
+                            <span>마음의 안식을 찾는 첫 걸음,</span>
+                            <div class="hero--float-box-txt2">
+                                <span>온밤</span>
+                                <span>이 함께 하겠습니다.</span>
+                            </div>
                         </div>
+
+                        <a href="/" class="hero--float-box--cta">
+                            <span>병원소개</span>
+                            <i data-lucide="chevron-right"></i>  
+                        </a>    
                     </div>
-
-                    <a href="/" class="hero--float-box--cta">
-                        <span>병원소개</span>
-                        <i data-lucide="chevron-right"></i>  
-                    </a>    
                 </div>
-            </li>
-        </ul>
 
+                <div class="swiper-slide hero hero2">
+                    <div class="hero--float-box">
+                        <div class="hero--float-box-txt">
+                            <span>사소한 실수가 반복되고 잠 못 드는 밤이 길어진다면,</span>
+                            <span>무너진 일상의 리듬을 다시 회복할 시간입니다.</span>
+                        </div>
+
+                        <a href="/" class="hero--float-box--cta">
+                            <span>진료안내</span>
+                            <i data-lucide="chevron-right"></i>  
+                        </a>    
+                    </div>
+                </div>
+
+                <div class="swiper-slide hero hero3">
+                    <div class="hero--float-box">
+                        <div class="hero--float-box-txt">
+                            <span>반복되는 불안과 깊어지는 무기력 속에서,</span>
+                            <span>당신의 하루가 다시 편안해질 수 있도록 함께합니다.</span>
+                        </div>
+
+                        <a href="/" class="hero--float-box--cta">
+                            <span>진료안내</span>
+                            <i data-lucide="chevron-right"></i>  
+                        </a>    
+                    </div>
+                </div>
+               
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+
+        
         <div class="hero-bottom">
             <div class="hero-bottom--time">
                 <div>
@@ -141,5 +180,6 @@
 
     <script src="https://unpkg.com/lucide@latest"></script>    <!-- 아이콘 사용위한 cdn  맨밑유지하기-->
     <script>lucide.createIcons(); </script>     <!-- 아이콘 사용하기 위한 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script> <!-- 스와이퍼슬라이드라이브러리 -->
 </body>
 </html>

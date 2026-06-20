@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 *{margin: 0; padding: 0;}
+html{font-size: 10px;}
 body{font-family: "Inter", sans-serif;}
 a{text-decoration: none; color: #333;}
 li{list-style: none;}

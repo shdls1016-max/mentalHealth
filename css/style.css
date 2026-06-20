@@ -124,5 +124,34 @@ ul.header--gnb{display: flex; gap: var(--vw-40px); position: relative; user-sele
 .hero-bottom--time > div{display: flex; gap: 0.83vw;}
 .hero-bottom--time > span{width: 4px; height: 4px; border-radius: 4px; display: inline-block; background: var(--wh2);}
 .hero-bottom--divider{width: 1px; height: 15px; display: inline-block; background: var(--wh2);}
-.hero-bottom--tel{}
 
+
+/* 섹션 공통요소 */
+.main-section-box{margin: 0 auto; max-width: 1600px; margin: 150px 20px;}
+.main-section-box strong.title{font-family: 'NanumMyeongjoBold'; line-height: 1.6; font-size: var(--sectionTitle); margin-bottom: 4.8rem; display: inline-block;}
+
+
+/* 섹션1 */
+.main-section-box > .sect1 > .row-align{display: grid; grid-template-columns: 2.1fr 1fr; gap: var(--vw-40px);}   /* -------아코디언&사진 정렬----------------- */
+.sect1--accordion{flex-grow: 1; border-top: 1px solid var(--bk111); border-bottom: 1px solid var(--bk111);}
+.accordion--subject{ 
+    display: flex; justify-content: space-between; gap: 16px; 
+    padding: 2rem 1rem; box-sizing: border-box;
+    font-size: var(--fz20); color: var(--bk111);} 
+.accordion--cont{padding: 2rem; box-sizing: border-box; border-top: 1px solid var(--bd1); border-bottom: 1px solid var(--bd1);}
+.accordion--cont > .row-align{display: flex; gap: 5.2vw; /* g:100px */ align-items: end;}
+.accordion--cont-quest{display: flex; flex-direction: column; gap: 1.6rem; flex-grow: 1;}
+.accordion--cont-quest > li {display: flex; gap: 8px; align-items: center;}
+.accordion--cont-quest > li > input{width: 16px; height: 16px; accent-color:#fff;}
+/* .accordion--cont-quest > li > input:checked{box-shadow: 0px 0px 1px var(--bk111);} */
+.accordion--cont-quest > li > label{font-size: var(--fz18); line-height: 1.4; color: var(--bk333);}
+
+.accordion--cont-result > {display: flex; flex-direction: column; gap: 1.6rem; }
+.accordion--cont-result > div{display: flex; flex-direction: column; gap: 6px; font-size: var(--fz18); line-height: 1.4; color: var(--bk333); max-width:319px; box-sizing: border-box;}
+
+.accordion--cont-hash{margin-top: 4rem; display: flex; gap: 1rem; user-select: none;}
+.accordion--cont-hash > div{display: flex; gap: 4px; padding: 8px 10px 8px 6px; border-radius: 50px; border: 1px solid var(--bd2); color: var(--bk555); font-size: var(--fz14);}
+
+
+.sect1--img{width: 100%; height: 100%;}
+.sect1--img > img{width: 100%; height: 100%; object-fit: cover; object-position: right;}

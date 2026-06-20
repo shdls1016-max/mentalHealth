@@ -24,13 +24,13 @@
     --fz18:18px;
     --fz14:14px;
 
-    --sectionTitle:1.56vw;
+    --sectionTitle-mid:1.56vw;
     --fz20-mid:1vw;
     --fz18-mid:0.93vw;
     --fz14-mid:14px;
 
 
-    --sectionTitle:25px;
+    --sectionTitle-min:25px;
     --fz20-min:17px;
     --fz18-min:15px;
     --fz14-min:12px;
@@ -52,3 +52,14 @@
     --swiper-theme-color:#fff5e2;
     --swiper-pagination-bullet-inactive-color:#fff;
 }
+
+
+/* js위한 클래스토글 */
+.rotate180_effect{transform: rotate(180deg); transition: transform .3s;}
+.rotate360_effect{transform: rotate(360deg); transition: transform .3s;}
+
+.db{display: block;}
+.dn{display: none;}
+
+.opacity0{opacity: 0;}
+.opacity0{opacity: 1;}

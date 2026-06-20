@@ -127,11 +127,12 @@ ul.header--gnb{display: flex; gap: var(--vw-40px); position: relative; user-sele
 
 
 /* 섹션 공통요소 */
-.main-section-box{margin: 0 auto; max-width: 1600px; margin: 150px 20px;}
+.main-section-box{margin: 150px auto; max-width: 1600px; display: flex; flex-direction: column; gap: 170px;}
 .main-section-box strong.title{font-family: 'NanumMyeongjoBold'; line-height: 1.6; font-size: var(--sectionTitle); margin-bottom: 4.8rem; display: inline-block;}
 
 
 /* 섹션1 */
+.main-section-box > .sect1{margin-left: var(--vw-100px); margin-right: var(--vw-100px);}
 .main-section-box > .sect1 > .row-align{display: grid; grid-template-columns: 2.1fr 1fr; gap: var(--vw-40px);}   /* -------아코디언&사진 정렬----------------- */
 .sect1--accordion{flex-grow: 1; border-top: 1px solid var(--bk111); border-bottom: 1px solid var(--bk111);}
 .accordion--subject{ 
@@ -139,7 +140,7 @@ ul.header--gnb{display: flex; gap: var(--vw-40px); position: relative; user-sele
     padding: 2rem 1rem; box-sizing: border-box;
     font-size: var(--fz20); color: var(--bk111);} 
 .accordion--cont{padding: 2rem; box-sizing: border-box; border-top: 1px solid var(--bd1); border-bottom: 1px solid var(--bd1);}
-.accordion--cont > .row-align{display: flex; gap: 5.2vw; /* g:100px */ align-items: end;}
+.accordion--cont > .row-align{display: flex; gap: var(--vw-100px); align-items: end;}
 .accordion--cont-quest{display: flex; flex-direction: column; gap: 1.6rem; flex-grow: 1;}
 .accordion--cont-quest > li {display: flex; gap: 8px; align-items: center;}
 .accordion--cont-quest > li > input{width: 16px; height: 16px; accent-color:#fff;}
@@ -155,3 +156,5 @@ ul.header--gnb{display: flex; gap: var(--vw-40px); position: relative; user-sele
 
 .sect1--img{width: 100%; height: 100%;}
 .sect1--img > img{width: 100%; height: 100%; object-fit: cover; object-position: right;}
+
+.sect1--alert{font-size: var(--fz14); color: var(--bk555); margin-top: 20px; margin-left: 10px;}

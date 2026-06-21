@@ -162,19 +162,41 @@ ul.header--gnb{display: flex; gap: var(--vw-40px); position: relative; user-sele
 
 /* 섹션2 */
 .main-section-box > .sect2{margin-left: var(--vw-100px); margin-right: var(--vw-100px);}
-.sect2-cont{margin-top: 4.8rem;}
-.sect2-cont--deco-nums{display: flex; justify-content: space-around;}
-.sect2-cont--deco-nums > div{display: flex; gap: 2px; font-size: var(--deco-fz50); font-weight: 700;}
-.sect2-cont--deco-nums > div > span:nth-of-type(1){color:#F1EEE9;}
-.sect2-cont--deco-nums > div > span:nth-of-type(2){color: var(--main-color);}
+.sect2-cont{margin-top: 4.8rem;  position: relative;}   /* deco-bd의 기준 */
 
-.sect2-cont--deco-bd{max-width: 1600px;  height: fit-content; position: relative; border: 1px solid #000;}
-.sect2-cont--deco-bd > div{width: 100%; height: 4px; background: var(--main-color); 
-position: absolute; top: 50%; left: 0; transform: translateY(-50%);}
-/* .sect2-cont--deco-circles{display: flex; justify-content: space-around; height: fit-content; border: 1px solid red;}
-.sect2-cont--deco-circles > span{display: inline-block; width: 14px; height: 14px; border-radius: 50px; background: var(--main-color);} */
+.sect2-cont-indiset{display: flex; justify-content: space-around;}
+.sect2-cont-indi{display: flex; flex-direction: column; gap: 20px; align-items: center;}
+.sect2-cont--deco-nums {display: flex; gap: 2px; font-size: var(--deco-fz50); font-weight: 700;}
+.sect2-cont--deco-nums > span:nth-of-type(1){color:#F1EEE9;}
+.sect2-cont--deco-nums > span:nth-of-type(2){color: var(--main-color);}
 
-.sect2-cont--txt-sets{display: flex; justify-content: space-around; margin-top: 15px;}
-.sect2-cont--txt-set{display: flex; flex-direction: column; gap: 2rem; align-items: center; }
+.sect2-cont--deco-circle{display: inline-block; width: 12px; height: 12px; border-radius: 52px; background: var(--main-color); opacity: 0; margin-left: -20px;} 
+
+.sect2-cont--txt-set{display: flex; flex-direction: column; gap: 1.6rem; align-items: center; opacity: 1; transition: opacity .3s, margin-top .6s; }
 .sect2-cont--txt-set > span{font-size: var(--fz20); color: var(--bk111); text-align: center;}
 .sect2-cont--txt-set > div{font-size: var(--fz18); line-height: 1.4; text-align: center; color: var(--bk333);}
+
+.sect2-cont--deco-bd {width: 100%; height: 4px; background: var(--main-color); 
+position: absolute; top: 43%; left: 0; border-radius: 2px;}
+
+/* 섹션2 효과위해 */
+.sect2-cont-indi.order2 .sect2-cont--txt-set{position: absolute; bottom: -10rem; opacity: 0; }
+.sect2-cont-indi.order3 .sect2-cont--txt-set{position: absolute; bottom: -10rem;  opacity: 0;}
+.sect2-cont-indi.order4 .sect2-cont--txt-set{position: absolute; bottom: 0;  bottom: -10rem; opacity: 0;}
+
+.sect2-cont-indi.order2 .sect2-cont--txt-set.up{animation: scrollEleUp .6s ease-out .4s forwards;  transition: opacity .3s, margin-top .6s;}
+.sect2-cont-indi.order3 .sect2-cont--txt-set.up{animation: scrollEleUp .6s ease-out .8s forwards;  transition: opacity .3s, margin-top .6s;}
+.sect2-cont-indi.order4 .sect2-cont--txt-set.up{animation: scrollEleUp .6s ease-out 1.2s forwards;  transition: opacity .3s, margin-top .6s;}
+
+.sect2-cont--txt-set.opacity0{opacity: 0; margin-top: 50px;}
+
+/* ---------------- 위는 텍스트 아래는 원------------------ */
+.sect2-cont--deco-circle.opacity1{opacity: 1; margin-left: 0px; transition: opacity .4s, margin-left .5s;}
+
+
+
+
+@keyframes scrollEleUp {
+    0% {opacity: 0; bottom: -8rem;}
+    100%{opacity: 1; bottom: 0;}
+}

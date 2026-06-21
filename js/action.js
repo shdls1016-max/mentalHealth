@@ -27,8 +27,8 @@ const swiper = new Swiper('.swiper', {
 
 
 /* 메인페이지 섹션1 아코디언 */
-let accordion_subjects = document.querySelectorAll('.accordion--subject');
-let accordion_conts = document.querySelectorAll('.accordion--cont');
+const accordion_subjects = document.querySelectorAll('.accordion--subject');
+const accordion_conts = document.querySelectorAll('.accordion--cont');
 
 accordion_subjects.forEach((subject, idx)=>{    
     
@@ -62,4 +62,78 @@ accordion_subjects.forEach((subject, idx)=>{
     })
     
 });
+
+
+
+/* 메인페이지 섹션2 애니메이션 */
+const sect2Start = document.querySelector('.main-section-box').children[1].offsetTop;
+const viewportHeight = window.innerHeight;
+const sect2Circle = document.querySelectorAll('.sect2-cont--deco-circle');
+const sect2txtset = document.querySelectorAll('.sect2-cont--txt-set');
+
+let circleTimers = [];
+
+function showcircles(){
+    circleTimers.forEach((timer)=>{clearTimeout(timer)})
+    circleTimers = [];
+
+    sect2Circle.forEach((circle, i) => {
+        const timerId = setTimeout(() => {
+            circle.classList.add('opacity1');
+        }, i * 400); 
+        //타이머아이디에는 해당 타이머가 몇번째로 실행될지 자연수가 들어감
+        circleTimers.push(timerId);   //몇개의 타이머가 쌓였는지 확인할 수있게 생성즉시 리스트에 추가
+    });
+}
+
+function hiddencircles(){
+    circleTimers.forEach(timer => clearTimeout(timer));  //예약걸린 타이머제거
+    circleTimers = [];  //타이머리스트리셋
+
+    sect2Circle.forEach((circle) => {
+        circle.classList.remove('opacity1');
+    });
+}
+
+
+window.addEventListener('scroll', ()=>{
+    const currentScroll = window.scrollY;
+    const effectpoint = Number(sect2Start) - (Number(viewportHeight)/2)
+
+    const txtexcept1 = [...sect2txtset].slice(1);
+    
+    
+
+    if(currentScroll >=  effectpoint){
+        console.log('효과시작')       
+        showcircles()
+
+        if(sect2txtset[0].classList.contains('opacity0')){
+            sect2txtset[0].classList.remove('opacity0')
+        }
+        
+
+        txtexcept1.forEach((txt)=>{
+            if(!txt.classList.contains('up')){
+                txt.classList.add('up');
+            }
+        })
+
+    } else{
+        console.log('효과제거')
+        hiddencircles()
+
+        if(!sect2txtset[0].classList.contains('opacity0')){
+            sect2txtset[0].classList.add('opacity0')
+        }
+        
+
+        txtexcept1.forEach((txt)=>{
+            if(txt.classList.contains('up')){
+                txt.classList.remove('up');
+            }
+        })
+    }
+})
+
 

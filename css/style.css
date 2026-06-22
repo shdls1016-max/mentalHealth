@@ -128,7 +128,7 @@ ul.header--gnb{display: flex; gap: var(--vw-40px); position: relative; user-sele
 
 /* 섹션 공통요소 */
 .main-section-box{margin: 150px auto; max-width: 1600px; display: flex; flex-direction: column; gap: 170px;}
-.main-section-box strong.title{font-family: 'NanumMyeongjoBold'; line-height: 1.6; font-size: var(--sectionTitle); margin-bottom: 4.8rem; display: inline-block;}
+.main-section-box strong.title{font-family: 'NanumMyeongjoBold'; font-size: var(--sectionTitle); margin-bottom: 4.8rem; display: inline-block;}
 
 
 /* 섹션1 */
@@ -193,10 +193,16 @@ position: absolute; top: 43%; left: 0; border-radius: 2px;}
 /* ---------------- 위는 텍스트 아래는 원------------------ */
 .sect2-cont--deco-circle.opacity1{opacity: 1; margin-left: 0px; transition: opacity .4s, margin-left .5s;}
 
+/* 섹션3 */
+.sect3 > .row-align{display: grid; grid-template-columns: 1fr 1fr;}
+.sect3 > .row-align > div{background: var(--main-color); align-items: center;}
+.sect3--txt-set{display: flex; flex-direction: column; gap: 4.8rem; justify-content: center; height: 100%; margin-left: var(--vw-100px); margin-right: var(--vw-40px);}
+.sect3--txt-set--title{font-family: 'NanumMyeongjoBold'; font-size: var(--sectionTitle); display: inline-block;}
+.sect3--txt-set--cont{display: flex; flex-direction: column; gap: 1.6rem; font-size: var(--fz20); line-height: 1.6; color: var(--bk333);}
+
+.sect3--img-box{height: fit-content;}
+.sect3--img-box > img{display: block; object-fit: cover; object-position: right; width: 100%;}
 
 
 
-@keyframes scrollEleUp {
-    0% {opacity: 0; bottom: -8rem;}
-    100%{opacity: 1; bottom: 0;}
-}
+.main-section-box > .sect4{margin-left: var(--vw-100px); margin-right: var(--vw-100px);}

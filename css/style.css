@@ -132,7 +132,7 @@ ul.header--gnb{display: flex; gap: var(--vw-40px); position: relative; user-sele
 
 
 /* 섹션1 */
-.main-section-box > .sect1{margin-left: var(--vw-100px); margin-right: var(--vw-100px);}
+.main-section-box > .sect1{margin-left: var(--vw-100px); margin-right: var(--vw-100px); user-select: none;}
 .main-section-box > .sect1 > .row-align{display: grid; grid-template-columns: 2.1fr 1fr; gap: var(--vw-40px);}   /* -------아코디언&사진 정렬----------------- */
 .sect1--accordion{flex-grow: 1; border-top: 1px solid var(--bk111); border-bottom: 1px solid var(--bk111);}
 .accordion--subject{ 
@@ -161,7 +161,7 @@ ul.header--gnb{display: flex; gap: var(--vw-40px); position: relative; user-sele
 
 
 /* 섹션2 */
-.main-section-box > .sect2{margin-left: var(--vw-100px); margin-right: var(--vw-100px);}
+.main-section-box > .sect2{margin-left: var(--vw-100px); margin-right: var(--vw-100px); user-select: none;}
 .sect2-cont{margin-top: 4.8rem;  position: relative;}   /* deco-bd의 기준 */
 
 .sect2-cont-indiset{display: flex; justify-content: space-around;}
@@ -196,7 +196,7 @@ position: absolute; top: 43%; left: 0; border-radius: 2px;}
 /* 섹션3 */
 .sect3 > .row-align{display: grid; grid-template-columns: 1fr 1fr;}
 .sect3 > .row-align > div{background: var(--main-color); align-items: center;}
-.sect3--txt-set{display: flex; flex-direction: column; gap: 4.8rem; justify-content: center; height: 100%; margin-left: var(--vw-100px); margin-right: var(--vw-40px);}
+.sect3--txt-set{display: flex; flex-direction: column; gap: 4.8rem; justify-content: center; height: 100%; margin-left: var(--vw-100px); margin-right: var(--vw-40px); user-select: none;}
 .sect3--txt-set--title{font-family: 'NanumMyeongjoBold'; font-size: var(--sectionTitle); display: inline-block;}
 .sect3--txt-set--cont{display: flex; flex-direction: column; gap: 1.6rem; font-size: var(--fz20); line-height: 1.6; color: var(--bk333);}
 
@@ -206,3 +206,15 @@ position: absolute; top: 43%; left: 0; border-radius: 2px;}
 
 
 .main-section-box > .sect4{margin-left: var(--vw-100px); margin-right: var(--vw-100px);}
+.main-section-box > .sect4 > .row-align{display: grid; grid-template-columns:1fr 2fr; gap: var(--vw-40px);}
+.sect4--txt-set{padding: 4px 0; }
+.sect4--txt-set + div{background:yellow;}
+.sect4--txt-set--title{font-family: 'NanumMyeongjoBold'; font-size: var(--sectionTitle); display: inline-block; margin-bottom: 4.8rem; user-select: none;}
+ul.sect4--txt-set--cont{display: flex; flex-direction: column; gap: 2.4rem;}
+ul.sect4--txt-set--cont > li > span{font-size: var(--fz18); line-height: 1.4; color: var(--bk333); margin-bottom: .8rem; display: inline-block; user-select: none;}
+ul.sect4--txt-set--cont > li > div{font-size: var(--fz20); color: var(--bk111);}
+ul.sect4--txt-set--cont > li:first-of-type > div{user-select: auto;}
+ul.sect4--txt-set--cont > li:nth-of-type(3) > div{display: flex; row-gap: 8px; column-gap: 4px; align-items: center; flex-wrap: wrap;}
+
+.subway2{display: inline-block; padding: 2px 10px; border-radius: 50px; background: #3CB44A; font-size: var(--fz14); color: var(--wh1); user-select: none; line-height: 1.5;}
+.subwayRed{display: inline-block; padding: 2px 10px; border-radius: 50px; background: #A71E31; font-size: var(--fz14); color: var(--wh1); user-select: none; line-height: 1.5; white-space: nowrap;}

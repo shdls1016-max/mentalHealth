@@ -105,7 +105,7 @@ window.addEventListener('scroll', ()=>{
     
 
     if(currentScroll >=  effectpoint){
-        console.log('효과시작')       
+        //효과시작   
         showcircles()
 
         if(sect2txtset[0].classList.contains('opacity0')){
@@ -120,7 +120,7 @@ window.addEventListener('scroll', ()=>{
         })
 
     } else{
-        console.log('효과제거')
+        //효과제거
         hiddencircles()
 
         if(!sect2txtset[0].classList.contains('opacity0')){
@@ -135,5 +135,41 @@ window.addEventListener('scroll', ()=>{
         })
     }
 })
+
+
+/* gsap */
+document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger)
+  // gsap code here!
+    const sect3Timeline = gsap.timeline();
+
+    sect3Timeline
+        .from(".sect3--txt-set--title", { x: -50, opacity: 0, duration: 0.8, clearProps: "all" })
+        .from(".sect3--txt-set--cont > div:nth-child(1)", { y: 30, opacity: 0, duration: 0.6, clearProps: "all" }, "+=0.02")
+        .from(".sect3--txt-set--cont > div:nth-child(2)", { y: 30, opacity: 0, duration: 0.6, clearProps: "all" }, "+=0.05");
+
+
+
+    ScrollTrigger.create({
+        trigger : ".main-section-box > .sect3",
+        start : "top 70%",
+        end : "bottom 80%",
+        
+        onEnter : () => sect3Timeline.restart(),
+        onLeaveBack: () => sect3Timeline.pause(0)
+    });
+
+
+});
+
+
+
+
+
+
+
+
+
+
 
 

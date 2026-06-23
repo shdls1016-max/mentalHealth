@@ -208,7 +208,7 @@ position: absolute; top: 43%; left: 0; border-radius: 2px;}
 .main-section-box > .sect4{margin-left: var(--vw-100px); margin-right: var(--vw-100px);}
 .main-section-box > .sect4 > .row-align{display: grid; grid-template-columns:1fr 2fr; gap: var(--vw-40px);}
 .sect4--txt-set{padding: 4px 0; }
-.sect4--txt-set + div{background:yellow;}
+.sect4--txt-set + div{}
 .sect4--txt-set--title{font-family: 'NanumMyeongjoBold'; font-size: var(--sectionTitle); display: inline-block; margin-bottom: 4.8rem; user-select: none;}
 ul.sect4--txt-set--cont{display: flex; flex-direction: column; gap: 2.4rem;}
 ul.sect4--txt-set--cont > li > span{font-size: var(--fz18); line-height: 1.4; color: var(--bk333); margin-bottom: .8rem; display: inline-block; user-select: none;}

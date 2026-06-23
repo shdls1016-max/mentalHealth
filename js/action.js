@@ -160,6 +160,28 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
 
+
+    gsap.from([".sect4--txt-set--cont > li:nth-of-type(1)",
+        ".sect4--txt-set--cont > li:nth-of-type(2)",
+        ".sect4--txt-set--cont > li:nth-of-type(3)",
+        ".sect4--txt-set--cont > li:nth-of-type(4)"
+     ], {
+        scrollTrigger : {
+            trigger : ".main-section-box > .sect4",
+            start : "top 70%",
+            end : "bottom 85%",
+            toggleActions : "restart none none restart",
+            
+        },
+
+        y : 20,
+        opacity : 0,
+        duration : 0.8,
+        stagger : 0.2,
+
+    })
+
+
 });
 
 

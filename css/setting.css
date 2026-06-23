@@ -1,17 +1,26 @@
 @charset "UTF-8";
 
 *{margin: 0; padding: 0;}
+html{font-size: 10px;}
+body{font-family: "Inter", sans-serif;}
 a{text-decoration: none; color: #333;}
 li{list-style: none;}
+button{border: 0; background:transparent;}
 
 
 
 /* 폰트 */
 
-@import url('//fonts.googleapis.com/earlyaccess/nanummyeongjo.css');  
+/* @import url('//fonts.googleapis.com/earlyaccess/nanummyeongjo.css');   */
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nanum+Gothic&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* inter
 font-family: "Inter", sans-serif;
 <weight>: Use a value from 100 to 900
+*/
+
+/* 나눔명조
+font-family: 'NanumMyeongjo';
+font-family: 'NanumMyeongjoBold';
+font-family: 'NanumMyeongjoExtraBold';
 */

@@ -1,1 +1,73 @@
 @charset "UTF-8";
+
+:root{
+    /* 컬러 */
+    --point-color:#ff8138;
+    --point-color-hover:#ff6f1c;
+
+    --bk111:#111;
+    --bk333:#333;
+    --bk555:#555;
+
+    --wh1:#fff;
+    --wh2:#fffdf9;
+
+    --main-color:#bba990;
+    --bg-f6:#F6F6F6;
+    --bg-footer:#484136;
+    --bd1:#CFCFCF;
+    --bd2:#999;
+
+    /* 폰트크기 */
+    --sectionTitle:30px;
+    --fz20:20px;
+    --fz18:18px;
+    --fz14:14px;
+
+    --sectionTitle-mid:1.56vw;
+    --fz20-mid:1vw;
+    --fz18-mid:0.93vw;
+    --fz14-mid:14px;
+
+
+    --sectionTitle-min:25px;
+    --fz20-min:17px;
+    --fz18-min:15px;
+    --fz14-min:12px;
+
+
+    --deco-fz32:32px;
+    --deco-fz50:50px;
+
+    --deco-fz32-mid:1.66vw;
+    --deco-fz50-mid:2.6vw;
+
+    --deco-fz32-min:27px;
+    --deco-fz50-min:40px;
+
+    --vw-40px:2vw;
+    --vw-100px:5.2vw;
+
+    /* 슬라이드스와이퍼 */
+    --swiper-navigation-color:#bba990;
+    --swiper-theme-color:#fff5e2;
+    --swiper-pagination-bullet-inactive-color:#fff;
+}
+
+
+/* js위한 클래스토글 */
+.rotate180_effect{transform: rotate(180deg); transition: transform .3s;}
+.rotate360_effect{transform: rotate(360deg); transition: transform .3s;}
+
+.db{display: block;}
+.dn{display: none;}
+
+.opacity0{opacity: 0;}
+.opacity1{opacity: 1;}
+
+
+/* 애니메이션 */
+@keyframes scrollEleUp {
+    0% {opacity: 0; bottom: -8rem;}
+    100%{opacity: 1; bottom: 0;}
+}

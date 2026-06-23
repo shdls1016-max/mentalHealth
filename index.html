@@ -4,18 +4,856 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>온밤정신건강의학과</title>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-myeongjo.css" rel="stylesheet">   <!-- 나눔명조  CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/action.js" defer></script>
     
+    
 </head>
 <body>
-    <i data-lucide="menu"></i>   <!-- 아이콘 -->
+    <div class="wrap">
+        <header class="c-white">
+            <h2 class="header--logo">
+                <a href="/"><img src="img/logo.png" alt="logo"></a>
+            </h2>
     
+            <ul class="header--gnb">
+                <li class="lnb--wrap"></li>
+
+                <li class="header--gnb-li">
+                    <a href="/">병원소개</a>
+                    <span class="header--gnb-indicator"></span>
+                    <ul class="header--lnb">
+                        <li><a href="/">의료진</a></li>
+                        <li><a href="/">둘러보기</a></li>
+                        <li><a href="/">오시는길</a></li>
+                    </ul>
+                </li>
+    
+                <li class="header--gnb-li">
+                    <a href="/">진료안내</a>
+                    <span class="header--gnb-indicator"></span>
+                    <ul class="header--lnb">
+                        <li><a href="/">우울</a></li>
+                        <li><a href="/">불안</a></li>
+                        <li><a href="/">수면장애</a></li>
+                        <li><a href="/">ADHD</a></li>
+                        <li><a href="/">스트레스</a></li>
+                    </ul>
+                </li>
+    
+                <li class="header--gnb-li">
+                    <a href="/">검사</a>
+                    <span class="header--gnb-indicator"></span>
+                    <ul class="header--lnb">
+                        <li><a href="/">주의력정밀검사</a></li>
+                        <li><a href="/">종합심리검사</a></li>
+                        <li><a href="/">정량뇌파검사</a></li>
+                        <li><a href="/">스트레스검사</a></li>
+                    </ul>
+                </li>
+    
+                <li class="header--gnb-li">
+                    <a href="/">병원소식</a>
+                    <span class="header--gnb-indicator"></span>
+                    <ul class="header--lnb">
+                        <li><a href="/">FAQ</a></li>
+                        <li><a href="/">공지사항</a></li>
+                        <li><a href="/">비급여수가</a></li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <div class="header--icon-set">
+                <button type="button"><i data-lucide="search"></i>  </button>
+                <button type="button"><i data-lucide="menu"></i></button>
+            </div>
+        </header>
+    
+
+
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hero hero1">
+                    <div class="hero--float-box">
+                        <div class="hero--float-box-txt">
+                            <span>마음의 안식을 찾는 첫 걸음,</span>
+                            <div class="hero--float-box-txt2">
+                                <span>온밤</span>
+                                <span>이 함께 하겠습니다.</span>
+                            </div>
+                        </div>
+
+                        <a href="/" class="hero--float-box--cta">
+                            <span>병원소개</span>
+                            <i data-lucide="chevron-right"></i>  
+                        </a>    
+                    </div>
+                </div>
+
+                <div class="swiper-slide hero hero2">
+                    <div class="hero--float-box">
+                        <div class="hero--float-box-txt">
+                            <span>사소한 실수가 반복되고 잠 못 드는 밤이 길어진다면,</span>
+                            <span>무너진 일상의 리듬을 다시 회복할 시간입니다.</span>
+                        </div>
+
+                        <a href="/" class="hero--float-box--cta">
+                            <span>진료안내</span>
+                            <i data-lucide="chevron-right"></i>  
+                        </a>    
+                    </div>
+                </div>
+
+                <div class="swiper-slide hero hero3">
+                    <div class="hero--float-box">
+                        <div class="hero--float-box-txt">
+                            <span>반복되는 불안과 깊어지는 무기력 속에서,</span>
+                            <span>당신의 하루가 다시 편안해질 수 있도록 함께합니다.</span>
+                        </div>
+
+                        <a href="/" class="hero--float-box--cta">
+                            <span>진료안내</span>
+                            <i data-lucide="chevron-right"></i>  
+                        </a>    
+                    </div>
+                </div>
+               
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+
+
+        <div class="hero-bottom">
+            <div class="hero-bottom--time">
+                <div>
+                    <span>평일</span>
+                    <span>9:30~18:30</span>
+                </div>
+                <span></span>
+                <div>
+                    <span>토요일</span>
+                    <span>9:30~14:30</span>
+                </div>
+                <span></span>
+                <div>
+                    <span>점심</span>
+                    <span>12:30~14:00</span>
+                </div>
+            </div>
+            
+            <span class="hero-bottom--divider"></span>
+
+            <div class="hero-bottom--tel">
+                02)1234-5678
+            </div>
+        </div>
+
+
+        <div class="main-section-box">
+            <section class="sect1">
+                <strong class="title">진료과목</strong>
+                <div class="row-align">
+                    <div class="sect1--accordion">
+                        <div class="accordion--subject">
+                            <span>우울 · 무기력 </span>
+                            <i data-lucide="chevron-down" class="rotate180_effect"></i>  
+                        </div>
+
+                        <div class="accordion--cont db">
+                            <div class="row-align">
+                                <ul class="accordion--cont-quest">
+                                    <li>
+                                        <input type="checkbox" id="ckbox1-1">
+                                        <label for="ckbox1-1">이전에 즐겁던 일에 흥미가 줄었다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox1-2">
+                                        <label for="ckbox1-2">특별한 이유 없이 기분이 가라앉는다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox1-3">
+                                        <label for="ckbox1-3">쉽게 피로하고 의욕이 나지 않는다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox1-4">
+                                        <label for="ckbox1-4">아침에 일어나기가 힘들다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox1-5">
+                                        <label for="ckbox1-5">스스로를 자주 비난한다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox1-6">
+                                        <label for="ckbox1-6">집중하기 어렵다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox1-7">
+                                        <label for="ckbox1-7">식욕이 늘거나 줄었다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox1-8">
+                                        <label for="ckbox1-8">잠이 너무 많거나 부족하다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox1-9">
+                                        <label for="ckbox1-9">사람들과 만나고 싶지 않다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox1-10">
+                                        <label for="ckbox1-10">미래에 대한 기대감이 줄어들었다</label>
+                                    </li>
+                                </ul>
+
+                                <div class="accordion--cont-result">
+                                    <div>
+                                        <span>0 ~ 2개</span>
+                                        <span>일시적인 스트레스일 수 있습니다</span>
+                                    </div>
+
+                                    <div>
+                                        <span>3 ~ 5개</span>
+                                        <span>상담을 통해 현재 상태를 점검해보는 것이 좋습니다</span>
+                                    </div>
+
+                                    <div>
+                                        <span>6개 이상</span>
+                                        <span>전문적인 평가와 상담을 권장합니다</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion--cont-hash">
+                                <div>
+                                    <span>#</span>
+                                    <span>무감각</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>공허감</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>의욕저하</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>자기비난</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>식욕변화</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>눈물증가</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+                        <div class="accordion--subject">
+                            <span>불안 · 공황 </span>
+                            <i data-lucide="chevron-down"></i>  
+                        </div>
+
+                        <div class="accordion--cont dn">
+                            <div class="row-align">
+                                <ul class="accordion--cont-quest">
+                                    <li>
+                                        <input type="checkbox" id="ckbox2-1">
+                                        <label for="ckbox2-1">이유 없이 불안하다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox2-2">
+                                        <label for="ckbox2-2">걱정이 쉽게 멈추지 않는다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox2-3">
+                                        <label for="ckbox2-3">긴장 상태가 계속된다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox2-4">
+                                        <label for="ckbox2-4">가슴이 두근거린다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox2-5">
+                                        <label for="ckbox2-5">숨이 답답하거나 막히는 느낌이 든다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox2-6">
+                                        <label for="ckbox2-6">작은 일에도 예민하게 반응한다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox2-7">
+                                        <label for="ckbox2-7">최악의 상황을 자주 상상한다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox2-8">
+                                        <label for="ckbox2-8">사람 많은 장소가 부담스럽다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox2-9">
+                                        <label for="ckbox2-9">불안 때문에 집중하기 어렵다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox2-10">
+                                        <label for="ckbox2-10">갑작스럽게 공포감이 밀려온 적이 있다</label>
+                                    </li>
+                                </ul>
+
+                                <div class="accordion--cont-result">
+                                    <div>
+                                        <span>0 ~ 2개</span>
+                                        <span>일반적인 범위일 수 있습니다</span>
+                                    </div>
+
+                                    <div>
+                                        <span>3 ~ 5개</span>
+                                        <span>불안 수준을 점검해볼 필요가 있습니다</span>
+                                    </div>
+
+                                    <div>
+                                        <span>6개 이상</span>
+                                        <span>전문상담을 권장합니다</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion--cont-hash">
+                                <div>
+                                    <span>#</span>
+                                    <span>예민함</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>긴장감</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>과도한 걱정</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>반복적인 생각</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>어지러움</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>가슴답답함</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion--subject">
+                            <span>수면장애</span>
+                            <i data-lucide="chevron-down"></i>  
+                        </div>
+
+                        <div class="accordion--cont dn">
+                            <div class="row-align">
+                                <ul class="accordion--cont-quest">
+                                    <li>
+                                        <input type="checkbox" id="ckbox3-1">
+                                        <label for="ckbox3-1">잠드는 데 30분 이상 걸린다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox3-2">
+                                        <label for="ckbox3-2">자다가 자주 깬다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox3-3">
+                                        <label for="ckbox3-3">새벽에 일찍 깨어 다시 잠들기 어렵다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox3-4">
+                                        <label for="ckbox3-4">자고 일어나도 개운하지 않다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox3-5">
+                                        <label for="ckbox3-5">낮 동안 졸림이 심하다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox3-6">
+                                        <label for="ckbox3-6">잠에 대한 걱정이 있다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox3-7">
+                                        <label for="ckbox3-7">주말과 평일 수면 패턴 차이가 크다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox3-8">
+                                        <label for="ckbox3-8">악몽을 자주 꾼다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox3-9">
+                                        <label for="ckbox3-9">수면 때문에 일상에 지장이 있다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox3-10">
+                                        <label for="ckbox3-10">피곤한데도 쉽게 잠들지 못한다</label>
+                                    </li>
+                                </ul>
+
+                                <div class="accordion--cont-result">
+                                    <div>
+                                        <span>0 ~ 2개</span>
+                                        <span>일반적인 범위일 수 있습니다</span>
+                                    </div>
+
+                                    <div>
+                                        <span>3 ~ 5개</span>
+                                        <span>상담을 통해 현재 상태를 점검해보는 것이 좋습니다</span>
+                                    </div>
+
+                                    <div>
+                                        <span>6개 이상</span>
+                                        <span>전문적인 평가와 상담을 권장합니다</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion--cont-hash">
+                                <div>
+                                    <span>#</span>
+                                    <span>얕은수면</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>잦은각성</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>피로감</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>무기력</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>악몽</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>수면리듬불균형</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+                        <div class="accordion--subject">
+                            <span>ADHD </span>
+                            <i data-lucide="chevron-down"></i>  
+                        </div>
+
+                        <div class="accordion--cont dn">
+                            <div class="row-align">
+                                <ul class="accordion--cont-quest">
+                                    <li>
+                                        <input type="checkbox" id="ckbox4-1">
+                                        <label for="ckbox4-1">집중력이 오래 유지되지 않는다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox4-2">
+                                        <label for="ckbox4-2">해야 할 일을 자주 잊는다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox4-3">
+                                        <label for="ckbox4-3">실수가 반복된다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox4-4">
+                                        <label for="ckbox4-4">물건을 자주 잃어버린다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox4-5">
+                                        <label for="ckbox4-5">일을 끝까지 마무리하기 어렵다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox4-6">
+                                        <label for="ckbox4-6">계획보다 즉흥적으로 행동한다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox4-7">
+                                        <label for="ckbox4-7">대화 중 딴생각을 자주 한다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox4-8">
+                                        <label for="ckbox4-8">정리정돈이 어렵다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox4-9">
+                                        <label for="ckbox4-9">업무나 공부를 자꾸 미룬다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox4-10">
+                                        <label for="ckbox4-10">여러 일을 동시에 벌여 놓는다</label>
+                                    </li>
+                                </ul>
+
+                                <div class="accordion--cont-result">
+                                    <div>
+                                        <span>0 ~ 3개</span>
+                                        <span>일반적인 범위일 수 있습니다</span>
+                                    </div>
+
+                                    <div>
+                                        <span>4 ~ 6개</span>
+                                        <span>상담을 통해 현재 상태를 점검해보는 것이 좋습니다</span>
+                                    </div>
+
+                                    <div>
+                                        <span>7개 이상</span>
+                                        <span>전문적인 평가와 상담을 권장합니다</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion--cont-hash">
+                                <div>
+                                    <span>#</span>
+                                    <span>주의산만</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>건망증</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>충동성</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>성급함</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>실수증가</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>우선순위혼란</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        
+                        <div class="accordion--subject">
+                            <span>스트레스 · 번아웃 </span>
+                            <i data-lucide="chevron-down"></i>  
+                        </div>
+
+                        <div class="accordion--cont dn">
+                            <div class="row-align">
+                                <ul class="accordion--cont-quest">
+                                    <li>
+                                        <input type="checkbox" id="ckbox5-1">
+                                        <label for="ckbox5-1">쉬어도 피로가 풀리지 않는다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox5-2">
+                                        <label for="ckbox5-2">일에 대한 의욕이 떨어졌다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox5-3">
+                                        <label for="ckbox5-3">작은 일에도 짜증이 난다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox5-4">
+                                        <label for="ckbox5-4">업무 효율이 예전보다 낮아졌다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox5-5">
+                                        <label for="ckbox5-5">집중력이 떨어졌다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox5-6">
+                                        <label for="ckbox5-6">감정 표현이 줄어들었다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox5-7">
+                                        <label for="ckbox5-7">출근 또는 업무 시작이 부담된다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox5-8">
+                                        <label for="ckbox5-8">일상에서 즐거움을 느끼기 어렵다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox5-9">
+                                        <label for="ckbox5-9">자주 무기력하다</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ckbox5-10">
+                                        <label for="ckbox5-10">몸이 항상 긴장된 느낌이다</label>
+                                    </li>
+                                </ul>
+
+                                <div class="accordion--cont-result">
+                                    <div>
+                                        <span>0 ~ 2개</span>
+                                        <span>일시적인 피로일 수 있습니다</span>
+                                    </div>
+
+                                    <div>
+                                        <span>3 ~ 5개</span>
+                                        <span>휴식과 스트레스 관리가 필요합니다</span>
+                                    </div>
+
+                                    <div>
+                                        <span>6개 이상</span>
+                                        <span>번아웃 상태를 점검해볼 필요가 있습니다</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion--cont-hash">
+                                <div>
+                                    <span>#</span>
+                                    <span>탈진감</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>냉소적태도</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>동기감소</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>판단력저하</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>만성피로</span>
+                                </div>
+                                <div>
+                                    <span>#</span>
+                                    <span>두통</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <figure class="sect1--img">
+                        <img src="img/SECT1-1IMG.jpg" draggable="false">
+                    </figure>
+                </div>
+
+                <div class="sect1--alert">본 체크리스트는 참고용이며 정확한 진단을 대신할 수 없습니다. 증상이 지속되거나 일상에 영향을 준다면 전문의 상담을 받아보시기 바랍니다</div>
+            </section>
+
+            <section class="sect2">
+                <strong class="title">진료과정</strong>
+
+                <div class="sect2-cont">
+                    <div class="sect2-cont-indiset">
+                        <div class="sect2-cont-indi">
+                            <div class="sect2-cont--deco-nums"><span>0</span> <span>1</span></div>
+                            <span class="sect2-cont--deco-circle"></span>
+                            <div class="sect2-cont--txt-set opacity0">
+                                <span>초기상담</span>
+                                <div>현재 겪고 있는 증상에 대한<br>편안한 대화</div>
+                            </div>
+                        </div>
+    
+                        <div class="sect2-cont-indi order2">
+                            <div class="sect2-cont--deco-nums"><span>0</span> <span>2</span></div>
+                            <span class="sect2-cont--deco-circle"></span>
+                            <div class="sect2-cont--txt-set opacity0">
+                                <span>정밀검사</span>
+                                <div>객관적인 상태 파악을 위한<br>과학적 심리 검사</div>
+                            </div>
+                        </div>
+    
+                        <div class="sect2-cont-indi order3">
+                            <div class="sect2-cont--deco-nums"><span>0</span> <span>3</span></div>
+                            <span class="sect2-cont--deco-circle"></span>
+                            <div class="sect2-cont--txt-set opacity0">
+                            <span>맞춤치료</span>
+                            <div>약물치료 및 인지행동치료 등<br>개인별 솔루션</div>
+                        </div>
+                        </div>
+    
+                        <div class="sect2-cont-indi order4">
+                            <div class="sect2-cont--deco-nums"><span>0</span> <span>4</span></div>
+                            <span class="sect2-cont--deco-circle"></span>
+                            <div class="sect2-cont--txt-set opacity0">
+                                <span>사후관리</span>
+                                <div>지속적인 상담을 통한<br>마음의 자생력회복</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sect2-cont--deco-bd"></div>
+                </div>      
+            </section>
+
+            <section class="sect3">
+                <div class="row-align">
+                    <div>
+                        <div class="sect3--txt-set">
+                            <strong class="sect3--txt-set--title">말하기 힘든 고민도 괜찮습니다.</strong>
+                            <div class="sect3--txt-set--cont">
+                                <div>우리는 모두 각자만의 속도가 있습니다. <br>억지로 서두르지 않고, 당신의 이야기가 충분히 전달될 수 있도록 귀 기울여 듣겠습니다.</div>
+                                <div>프라이빗한 공간에서 편안하게 당신의 진심을 들려주세요.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <figure class="sect3--img-box">
+                        <img src="img/lnb1-2consultationroom1.jpg" alt="상담실" draggable="false">
+                    </figure>
+                </div>
+                
+            </section>
+
+            <section class="sect4">
+                <div class="row-align">
+                    <div class="sect4--txt-set">
+                        <strong class="sect4--txt-set--title">오시는 길</strong>
+                        <ul class="sect4--txt-set--cont">
+                            <li>
+                                <span>주소</span>
+                                <div>서울특별시 OO구 OO로 123 (OO빌딩 4층)</div>
+                            </li>
+
+                            <li>
+                                <span>전화</span>
+                                <div>02-1234-5678</div>
+                            </li>
+
+                            <li>
+                                <span>대중교통</span>
+                                <div>
+                                    <span class="subway2">2</span>
+                                    <span class="subwayRed">신분당</span>
+                                    <div>강남역 O번 출구에서 OO 방향으로 도보 O분</div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span>주차안내</span>
+                                <div>건물 내 지하 주차장 이용 가능 (최대 2시간 무료)</div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+
+                    <div>
+                        <!-- 지도 -->    
+                        <a href="https://map.kakao.com/?urlX=506252&urlY=1110577&urlLevel=4&map_type=TYPE_MAP&map_hybrid=false" target="_blank">
+                            <img width="100%" height="100%" src="https://staticmap.kakao.com/map/mapservice?FORMAT=PNG&SCALE=2&MX=506252&MY=1110575&S=0&IW=1060&IH=500&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo" style="border:1px solid #ccc">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+        <footer>
+            <h2><a href="/"><img src="img/logo.png" alt="로고"></a></h2>
+
+            <div class="row-align">
+                <div class="footer--info-box">
+                    <ul class="footer--info-box--links">
+                        <li><a href="/">개인정보처리방침</a></li>
+                        <li><a href="/">이용약관</a></li>
+                        <li><a href="/">비급여항목고지</a></li>
+                    </ul>
+
+                    <div class="footer--info-box--etcs">
+                        <span>서울특별시 OO구 OO로 123 OO빌딩 4층</span>
+                        <div>
+                            <div>
+                                <span>상호명</span>
+                                <span>온밤정신건강의학과</span>
+                            </div>
+                            <span class="divider"></span>
+                            <div>
+                                <span>대표자</span>
+                                <span>김OO</span>
+                            </div>
+                            <span class="divider"></span>
+                            <div>
+                                <span>사업자번호</span>
+                                <span>123-45-6789</span>
+                            </div>
+                            <span class="divider"></span>
+                            <div>
+                                <span>문의전화</span>
+                                <span>02-1234-5678</span>
+                            </div>
+                            <span class="divider"></span>
+                        </div>
+                    </div>
+
+                    <span class="footer--info-box--copyright">
+                        ⓒ 2026 온밤정신건강의학과
+                    </span>
+                </div>
+
+                <div class="footer--openTime">
+                    <span>진료안내</span>
+                    <div>
+                        <div>
+                            <span>평일</span> <span>9:30 ~ 18:30</span>
+                        </div>
+                        <div>
+                            <span>토요일</span> <span>9:30 ~ 14:30</span>
+                        </div>
+                        <div>
+                            <span>점심</span> <span>12:30 ~ 14:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+
+
+
+
+
+
+
+
 
 
 
 
     <script src="https://unpkg.com/lucide@latest"></script>    <!-- 아이콘 사용위한 cdn  맨밑유지하기-->
     <script>lucide.createIcons(); </script>     <!-- 아이콘 사용하기 위한 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script> <!-- 스와이퍼슬라이드라이브러리 -->
+    
+    <!-- gsap 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
 </body>
 </html>

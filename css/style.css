@@ -23,7 +23,7 @@ h2.header--logo > a > img{width: 100%; height:100%; object-fit: contain;}
 ul.header--gnb{display: flex; gap: var(--vw-40px); position: relative; user-select: none;}  /* !!!!!!!!!페이지이동안되면 user-select 없애기!!!!!!!!!! */
 .header--gnb-li{text-align: center; position: relative;}
 .header--gnb-li > a{
-    font-size: clamp(var(--fz18-min),var(--fz18-mid),var(--fz18)); color: var(--bk111); white-space: nowrap; 
+    font-size: var(--fz18); color: var(--bk111); white-space: nowrap; 
     padding: 10px; width: 90px; 
     box-sizing: border-box; display: inline-block; 
     text-align: center;
@@ -31,7 +31,7 @@ ul.header--gnb{display: flex; gap: var(--vw-40px); position: relative; user-sele
 .header--lnb{position: absolute; top: 180%; left: 50%; transform: translateX(-50%); opacity: 0;  pointer-events: none;  visibility: hidden; height: 0; z-index: 5;}
 .header--lnb > li{width: 100%; }
 .header--lnb > li > a{
-    white-space: nowrap; font-size: clamp(13px, 0.83vw, 16px); color: var(--bk333);
+    white-space: nowrap; font-size:16px; color: var(--bk333);
     width: fit-content; padding: 5px; display: inline-block; 
     position: relative;
 }
@@ -100,20 +100,20 @@ ul.header--gnb{display: flex; gap: var(--vw-40px); position: relative; user-sele
 .hero--float-box{display: flex; flex-direction: column; gap: 43px; align-items: end; width: fit-content; color: var(--wh2); font-family: 'NanumMyeongjo'; position: absolute; top: 35%; right: 10%;}
 .hero--float-box-txt{
     display: flex; flex-direction: column; gap: 16px; align-items: end;
-    font-size: clamp(var(--deco-fz32-min),var(--deco-fz32-mid),var(--deco-fz32)); 
+    font-size: var(--deco-fz32); 
     user-select: none;
 }
 .hero--float-box-txt2{display: flex; gap: 16px; align-items: end;}
-.hero--float-box-txt2 > span:nth-of-type(1){font-size: clamp(var(--deco-fz50-min),var(--deco-fz50-mid),var(--deco-fz50)); color: var(--wh1);}
+.hero--float-box-txt2 > span:nth-of-type(1){font-size: var(--deco-fz50); color: var(--wh1);}
 
 .hero--float-box--cta{display: flex; gap: 2px; align-items: center; padding: 10px; padding-right: 4px; background:var(--point-color); border-radius: 50px; cursor: pointer;}
-.hero--float-box--cta > span{color: var(--wh1); font-size: clamp(var(--fz14-min),var(--fz14-mid),var(--fz14)); font-family: "Inter", sans-serif;}
+.hero--float-box--cta > span{color: var(--wh1); font-size: var(--fz14); font-family: "Inter", sans-serif;}
 .hero--float-box--cta > svg{stroke: var(--wh1); stroke-width: 1.4; width: 16px; height: 16px;}
 .hero--float-box--cta:hover{background: var(--point-color-hover); transition: background .5s;}
 
 
 .hero-bottom{
-    font-size: clamp(var(--fz18-min),var(--fz18-mid),var(--fz18)); 
+    font-size: var(--fz18); 
     display: flex; gap: 5.2vw; align-items: center; justify-content: center;
     padding: 20px; width: 100%; box-sizing: border-box;
     background: var(--main-color); color: var(--wh1);
@@ -127,12 +127,12 @@ ul.header--gnb{display: flex; gap: var(--vw-40px); position: relative; user-sele
 
 
 /* 섹션 공통요소 */
-.main-section-box{margin: 150px auto; max-width: 1600px; display: flex; flex-direction: column; gap: 170px;}
+.main-section-box{margin: 150px auto; /* max-width: 1600px; */ max-width: 1920px; display: flex; flex-direction: column; gap: 170px;}
 .main-section-box strong.title{font-family: 'NanumMyeongjoBold'; font-size: var(--sectionTitle); margin-bottom: 4.8rem; display: inline-block;}
 
 
 /* 섹션1 */
-.main-section-box > .sect1{margin-left: var(--vw-100px); margin-right: var(--vw-100px); user-select: none;}
+.main-section-box > .sect1{padding-left: var(--vw-100px); padding-right: var(--vw-100px); user-select: none; max-width: 1600px; margin-left: auto; margin-right: auto; }
 .main-section-box > .sect1 > .row-align{display: grid; grid-template-columns: 2.1fr 1fr; gap: var(--vw-40px);}   /* -------아코디언&사진 정렬----------------- */
 .sect1--accordion{flex-grow: 1; border-top: 1px solid var(--bk111); border-bottom: 1px solid var(--bk111);}
 .accordion--subject{ 
@@ -161,7 +161,7 @@ ul.header--gnb{display: flex; gap: var(--vw-40px); position: relative; user-sele
 
 
 /* 섹션2 */
-.main-section-box > .sect2{margin-left: var(--vw-100px); margin-right: var(--vw-100px); user-select: none;}
+.main-section-box > .sect2{user-select: none; padding-left: var(--vw-100px); padding-right: var(--vw-100px); max-width: 1600px; margin-left: auto; margin-right: auto; width: 100%;}
 .sect2-cont{margin-top: 4.8rem;  position: relative;}   /* deco-bd의 기준 */
 
 .sect2-cont-indiset{display: flex; justify-content: space-around;}
@@ -194,9 +194,10 @@ position: absolute; top: 43%; left: 0; border-radius: 2px;}
 .sect2-cont--deco-circle.opacity1{opacity: 1; margin-left: 0px; transition: opacity .4s, margin-left .5s;}
 
 /* 섹션3 */
+.main-section-box > .sect3{max-width: 1920px;}
 .sect3 > .row-align{display: grid; grid-template-columns: 1fr 1fr;}
 .sect3 > .row-align > div{background: var(--main-color); align-items: center;}
-.sect3--txt-set{display: flex; flex-direction: column; gap: 4.8rem; justify-content: center; height: 100%; margin-left: var(--vw-100px); margin-right: var(--vw-40px); user-select: none;}
+.sect3--txt-set{display: flex; flex-direction: column; gap: 4.8rem; justify-content: center; height: 100%; margin-left: 8.33vw; margin-right: var(--vw-40px); user-select: none;}
 .sect3--txt-set--title{font-family: 'NanumMyeongjoBold'; font-size: var(--sectionTitle); display: inline-block;}
 .sect3--txt-set--cont{display: flex; flex-direction: column; gap: 1.6rem; font-size: var(--fz20); line-height: 1.6; color: var(--bk333);}
 
@@ -205,10 +206,9 @@ position: absolute; top: 43%; left: 0; border-radius: 2px;}
 
 
 
-.main-section-box > .sect4{margin-left: var(--vw-100px); margin-right: var(--vw-100px);}
+.main-section-box > .sect4{padding-left: var(--vw-100px); padding-right: var(--vw-100px); max-width: 1600px; margin-left: auto; margin-right: auto;}
 .main-section-box > .sect4 > .row-align{display: grid; grid-template-columns:1fr 2fr; gap: var(--vw-40px);}
 .sect4--txt-set{padding: 4px 0; }
-.sect4--txt-set + div{}
 .sect4--txt-set--title{font-family: 'NanumMyeongjoBold'; font-size: var(--sectionTitle); display: inline-block; margin-bottom: 4.8rem; user-select: none;}
 ul.sect4--txt-set--cont{display: flex; flex-direction: column; gap: 2.4rem;}
 ul.sect4--txt-set--cont > li > span{font-size: var(--fz18); line-height: 1.4; color: var(--bk333); margin-bottom: .8rem; display: inline-block; user-select: none;}
@@ -245,5 +245,23 @@ ul.footer--info-box--links > li > a{font-size: 16px; font-weight: 600; color: va
 
 /* 반응형 */
 @media screen and (max-width : 1280px) {
-    
+
+/*    
+1280부터  폰트크기 클램프로 변경, 선택자 여러개 한번에 잡고 사이즈별로 중괄호 하나로만 만들기
+
+
+
+clamp(var(--fz18-min),var(--fz18-mid),var(--fz18))
+clamp(13px, 0.83vw, 16px)    16px
+clamp(var(--fz14-min),var(--fz14-mid),var(--fz14))
+
+clamp(var(--deco-fz32-min),var(--deco-fz32-mid),var(--deco-fz32))
+clamp(var(--deco-fz50-min),var(--deco-fz50-mid),var(--deco-fz50))
+
+
+
+ */
+
+
+
 }

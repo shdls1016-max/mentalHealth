@@ -71,6 +71,10 @@ const viewportHeight = window.innerHeight;
 const sect2Circle = document.querySelectorAll('.sect2-cont--deco-circle');
 const sect2txtset = document.querySelectorAll('.sect2-cont--txt-set');
 
+
+
+
+
 let circleTimers = [];
 
 function showcircles(){

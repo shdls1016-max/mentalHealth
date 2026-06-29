@@ -42,11 +42,12 @@
     --deco-fz32-mid:1.66vw;
     --deco-fz50-mid:2.6vw;
 
-    --deco-fz32-min:27px;
+    --deco-fz32-min:24px;
     --deco-fz50-min:40px;
 
     --vw-40px:2vw;
     --vw-100px:5.2vw;
+    --title-gap:4.8rem;
 
     /* 슬라이드스와이퍼 */
     --swiper-navigation-color:#bba990;
@@ -56,6 +57,9 @@
 
 
 /* js위한 클래스토글 */
+html{scrollbar-gutter: stable;}
+.scroll-lock{overflow: hidden;}
+
 .rotate180_effect{transform: rotate(180deg); transition: transform .3s;}
 .rotate360_effect{transform: rotate(360deg); transition: transform .3s;}
 

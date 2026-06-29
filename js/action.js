@@ -1,28 +1,123 @@
 //히어로 슬라이드스와이퍼
+let mySwiper = undefined;
 
-const swiper = new Swiper('.swiper', {
+function initSwiper(){
+    const windowWidth = window.innerWidth;
+
+    if(windowWidth > 810 && mySwiper === undefined){
+        mySwiper = new Swiper('.swiper', {
   
-  loop: true,
-  direction: 'horizontal',
-  slidesPerView: 1,       // 한 번에 보여줄 슬라이드 개수
-  spaceBetween: 0,
+        loop: true,
+        direction: 'horizontal',
+        slidesPerView: 1,       // 한 번에 보여줄 슬라이드 개수
+        spaceBetween: 0,
 
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
 
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
 
-   autoplay: {
-   delay: 5000,
- },
+        autoplay: {
+        delay: 5000,
+        disableOnIneraction : false,
+        },
+        });
+    }
+    else if (windowWidth <= 810 && mySwiper !== undefined){
+        mySwiper.slideTo(0,0);
+        mySwiper.destroy(true, true);
+        mySwiper = undefind;
+    }
+}
+
+initSwiper();
+window.addEventListener('resize', initSwiper);
 
 
-});
+/* 햄버거 */
+const hamburger = document.querySelector('.header--icon-set').children[1];
+const menuModal = document.querySelector('.side-menu');
+const sideMenuLis = document.querySelectorAll('.side-menu--gnb-li');
+const closeSideMenuBtn = menuModal.children[1];
+
+
+
+hamburger.addEventListener('click', ()=>{
+    menuModal.classList.add('active');
+    document.body.classList.add('scroll-lock');
+
+    if(menuModal.classList.contains('active') && mySwiper !== undefined){
+        mySwiper.autoplay.stop();
+        mySwiper.allowTouchMove = false;
+    } 
+})
+
+closeSideMenuBtn.addEventListener('click', ()=>{
+    menuModal.classList.remove('active');
+    document.body.classList.remove('scroll-lock');
+
+    sideMenuLis.forEach((li)=>{
+        if(li.children[1] && li.children[1].classList.contains('db')){
+            li.children[1].classList.remove('db');
+        }
+    })
+
+    if(!menuModal.classList.contains('active') && mySwiper !== undefined){
+        mySwiper.allowTouchMove = true;
+        mySwiper.update();
+        mySwiper.autoplay.start();
+    }
+})
+
+
+menuModal.addEventListener('click', (e)=>{
+    e.stopPropagation();
+
+    if(menuModal.classList.contains('active') && menuModal === e.target){
+        menuModal.classList.remove('active');
+        document.body.classList.remove('scroll-lock');
+
+        sideMenuLis.forEach(li => {
+            if(li.children[1] && li.children[1].classList.contains('db')){
+                li.children[1].classList.remove('db');
+            }
+        });
+
+        if(!menuModal.classList.contains('active') && mySwiper !== undefined){
+            mySwiper.allowTouchMove = true;
+            mySwiper.update();
+            mySwiper.autoplay.start();
+        }
+    }
+})
+
+
+/* 아코디언처럼 만들기 하나 누르면 기존거 닫히게 */
+sideMenuLis.forEach((li)=>{
+    const gnbA = li.children[0];
+    const lnb = li.children[1];
+
+    if(gnbA && lnb){
+        gnbA.addEventListener('click', (e)=>{
+            if(window.matchMedia('(hover:none)').matches){
+                e.preventDefault();
+                e.stopPropagation();
+
+                sideMenuLis.forEach(l => l.children[1].classList.remove('db'))
+                lnb.classList.add('db');
+            }
+           
+        })
+    }
+})
+
+
+
 
 
 
@@ -69,72 +164,100 @@ accordion_subjects.forEach((subject, idx)=>{
 const sect2Start = document.querySelector('.main-section-box').children[1].offsetTop;
 const viewportHeight = window.innerHeight;
 const sect2Circle = document.querySelectorAll('.sect2-cont--deco-circle');
+const sect2ContentLines = document.querySelectorAll('.sect2-cont-indi');
 const sect2txtset = document.querySelectorAll('.sect2-cont--txt-set');
 
 let circleTimers = [];
+let mosect2timer = [];
+let isMobile = window.innerWidth <= 600;
 
-function showcircles(){
-    circleTimers.forEach((timer)=>{clearTimeout(timer)})
+function resetAllEffects(){
+    circleTimers.forEach(timer=>clearTimeout(timer));
+    mosect2timer.forEach(timer=>clearTimeout(timer));
     circleTimers = [];
+    mosect2timer = [];
 
-    sect2Circle.forEach((circle, i) => {
-        const timerId = setTimeout(() => {
-            circle.classList.add('opacity1');
-        }, i * 400); 
-        //타이머아이디에는 해당 타이머가 몇번째로 실행될지 자연수가 들어감
-        circleTimers.push(timerId);   //몇개의 타이머가 쌓였는지 확인할 수있게 생성즉시 리스트에 추가
-    });
-}
-
-function hiddencircles(){
-    circleTimers.forEach(timer => clearTimeout(timer));  //예약걸린 타이머제거
-    circleTimers = [];  //타이머리스트리셋
-
-    sect2Circle.forEach((circle) => {
-        circle.classList.remove('opacity1');
-    });
-}
-
-
-window.addEventListener('scroll', ()=>{
-    const currentScroll = window.scrollY;
-    const effectpoint = Number(sect2Start) - (Number(viewportHeight)/2)
-
-    const txtexcept1 = [...sect2txtset].slice(1);
-    
-    
-
-    if(currentScroll >=  effectpoint){
-        //효과시작   
-        showcircles()
-
-        if(sect2txtset[0].classList.contains('opacity0')){
-            sect2txtset[0].classList.remove('opacity0')
-        }
-        
-
-        txtexcept1.forEach((txt)=>{
-            if(!txt.classList.contains('up')){
-                txt.classList.add('up');
-            }
-        })
-
-    } else{
-        //효과제거
-        hiddencircles()
-
-        if(!sect2txtset[0].classList.contains('opacity0')){
-            sect2txtset[0].classList.add('opacity0')
-        }
-        
-
-        txtexcept1.forEach((txt)=>{
-            if(txt.classList.contains('up')){
-                txt.classList.remove('up');
-            }
-        })
+    // 2. PC용 클래스 제거
+    sect2Circle.forEach(circle => circle.classList.remove('opacity1'));
+    if (!sect2txtset[0].classList.contains('opacity0')) {
+        sect2txtset[0].classList.add('opacity0');
     }
-})
+    const txtexcept1 = [...sect2txtset].slice(1);
+    txtexcept1.forEach(txt => txt.classList.remove('up'));
+
+    // 3. 모바일용 클래스 제거
+    sect2ContentLines.forEach(line => line.classList.remove('mo_up'));
+}
+
+function handleResize(){
+    const currentIsMobile = window.innerWidth <= 600;
+    
+    if(isMobile !== currentIsMobile){
+        isMobile = currentIsMobile;
+        resetAllEffects();
+    }
+}
+
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+    const effectpoint = Number(sect2Start) - (Number(viewportHeight) * 0.8);
+
+    if (!isMobile) {
+        const txtexcept1 = [...sect2txtset].slice(1);
+        if(!sect2txtset[0].classList.contains('opacity0')){
+            sect2txtset[0].classList.add('opacity0');
+        }
+        if (currentScroll >= effectpoint) {
+            if (circleTimers.length === 0) {
+                sect2Circle.forEach((circle, i) => {
+                    const timerId = setTimeout(() => {
+                        circle.classList.add('opacity1');
+                    }, i * 400); 
+                    circleTimers.push(timerId);
+                });
+            }
+
+            sect2txtset[0].classList.remove('opacity0');
+            txtexcept1.forEach(txt => txt.classList.add('up'));
+        } else {
+            // 효과 제거
+            circleTimers.forEach(timer => clearTimeout(timer));
+            circleTimers = [];
+            sect2Circle.forEach(circle => circle.classList.remove('opacity1'));
+            sect2txtset[0].classList.add('opacity0');
+            txtexcept1.forEach(txt => txt.classList.remove('up'));
+        }
+
+    } else {
+        /* 모바일*/
+        sect2txtset[0].classList.remove('opacity0');
+        if (currentScroll >= effectpoint) {
+            if (mosect2timer.length === 0) {
+                sect2ContentLines.forEach((line, idx) => {
+                    const timerId = setTimeout(() => {
+                        line.classList.add('mo_up');
+                    }, idx * 400);
+                    mosect2timer.push(timerId);
+                });
+            }
+        } else {
+            mosect2timer.forEach(timer => clearTimeout(timer));
+            mosect2timer = []; 
+            
+            sect2ContentLines.forEach(line => {
+                line.classList.remove('mo_up');
+            });
+        }
+    }
+});
+
+// 초기 실행
+handleResize();
+window.addEventListener('resize', handleResize);
+
+    
+
 
 
 /* gsap */
@@ -160,26 +283,47 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
 
+    let section4 = gsap.matchMedia();
 
-    gsap.from([".sect4--txt-set--cont > li:nth-of-type(1)",
-        ".sect4--txt-set--cont > li:nth-of-type(2)",
-        ".sect4--txt-set--cont > li:nth-of-type(3)",
-        ".sect4--txt-set--cont > li:nth-of-type(4)"
-     ], {
-        scrollTrigger : {
+    section4.add("(min-width:1181px)", ()=>{
+        const sect4Timeline = gsap.timeline(); 
+
+        sect4Timeline.from(".sect4--txt-set--cont > li:nth-of-type(1)", {y : 20, opacity : 0, duration : 0.5, clearProps: "all"})
+        sect4Timeline.from(".sect4--txt-set--cont > li:nth-of-type(2)", {y : 20, opacity : 0, duration : 0.5, clearProps: "all"}, "+=0.1")
+        sect4Timeline.from(".sect4--txt-set--cont > li:nth-of-type(3)", {y : 20, opacity : 0, duration : 0.5, clearProps: "all"}, "+=0.1")
+        sect4Timeline.from(".sect4--txt-set--cont > li:nth-of-type(4)", {y : 20, opacity : 0, duration : 0.5, clearProps: "all"}, "+=0.1");
+
+        ScrollTrigger.create({
             trigger : ".main-section-box > .sect4",
             start : "top 70%",
             end : "bottom 85%",
-            toggleActions : "restart none none restart",
-            
-        },
 
-        y : 20,
-        opacity : 0,
-        duration : 0.8,
-        stagger : 0.2,
+            onEnter: ()=>sect4Timeline.restart(),
+            onLeaveBack: ()=>sect4Timeline.pause(0)
+        })
 
     })
+   
+    section4.add("(max-width:1180px)", ()=>{
+        const sect4MoTimeline = gsap.timeline(); 
+
+        sect4MoTimeline.from(".sect4--txt-set--cont > li:nth-of-type(1)", {y : 20, opacity : 0, duration : 0.5, clearProps: "all"})
+        sect4MoTimeline.from(".sect4--txt-set--cont > li:nth-of-type(2)", {y : 20, opacity : 0, duration : 0.5, clearProps: "all"}, "+=0.1")
+        sect4MoTimeline.from(".sect4--txt-set--cont > li:nth-of-type(3)", {y : 20, opacity : 0, duration : 0.5, clearProps: "all"}, "+=0.1")
+        sect4MoTimeline.from(".sect4--txt-set--cont > li:nth-of-type(4)", {y : 20, opacity : 0, duration : 0.5, clearProps: "all"}, "+=0.1");
+
+        ScrollTrigger.create({
+            trigger : ".sect4--txt-set--cont",
+            start : "top 84%",
+            end : "bottom 96%",
+
+            onEnter: ()=>sect4MoTimeline.restart(),
+            onLeaveBack: ()=>sect4MoTimeline.pause(0)
+        });
+
+    })
+
+
 
 
 });

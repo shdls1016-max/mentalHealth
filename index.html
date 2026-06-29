@@ -13,6 +13,54 @@
 </head>
 <body>
     <div class="wrap">
+        <div class="side-menu">
+            <ul class="side-menu--gnb">
+                <li class="side-menu--gnb-li">
+                    <a href="/">병원소개</a>
+                    <ul class="side-menu--lnb">
+                        <li><a href="/">의료진</a></li>
+                        <li><a href="/">둘러보기</a></li>
+                        <li><a href="/">오시는길</a></li>
+                    </ul>
+                </li>
+    
+                <li class="side-menu--gnb-li">
+                    <a href="/">진료안내</a>
+                    <ul class="side-menu--lnb">
+                        <li><a href="/">우울</a></li>
+                        <li><a href="/">불안</a></li>
+                        <li><a href="/">수면장애</a></li>
+                        <li><a href="/">ADHD</a></li>
+                        <li><a href="/">스트레스</a></li>
+                    </ul>
+                </li>
+    
+                <li class="side-menu--gnb-li">
+                    <a href="/">검사</a>
+                    <ul class="side-menu--lnb">
+                        <li><a href="/">주의력정밀검사</a></li>
+                        <li><a href="/">종합심리검사</a></li>
+                        <li><a href="/">정량뇌파검사</a></li>
+                        <li><a href="/">스트레스검사</a></li>
+                    </ul>
+                </li>
+    
+                <li class="side-menu--gnb-li">
+                    <a href="/">병원소식</a>
+                    <ul class="side-menu--lnb">
+                        <li><a href="/">FAQ</a></li>
+                        <li><a href="/">공지사항</a></li>
+                        <li><a href="/">비급여수가</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <button type="button">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+
         <header class="c-white">
             <h2 class="header--logo">
                 <a href="/"><img src="img/logo.png" alt="logo"></a>
@@ -150,7 +198,7 @@
             <span class="hero-bottom--divider"></span>
 
             <div class="hero-bottom--tel">
-                02)1234-5678
+                02-1234-5678
             </div>
         </div>
 
@@ -158,6 +206,7 @@
         <div class="main-section-box">
             <section class="sect1">
                 <strong class="title">진료과목</strong>
+
                 <div class="row-align">
                     <div class="sect1--accordion">
                         <div class="accordion--subject">
@@ -665,36 +714,36 @@
                         <div class="sect2-cont-indi">
                             <div class="sect2-cont--deco-nums"><span>0</span> <span>1</span></div>
                             <span class="sect2-cont--deco-circle"></span>
-                            <div class="sect2-cont--txt-set opacity0">
+                            <div class="sect2-cont--txt-set">
                                 <span>초기상담</span>
-                                <div>현재 겪고 있는 증상에 대한<br>편안한 대화</div>
+                                <div>현재 겪고 있는 증상에 대한 <br>편안한 대화</div>
                             </div>
                         </div>
     
                         <div class="sect2-cont-indi order2">
                             <div class="sect2-cont--deco-nums"><span>0</span> <span>2</span></div>
                             <span class="sect2-cont--deco-circle"></span>
-                            <div class="sect2-cont--txt-set opacity0">
+                            <div class="sect2-cont--txt-set">
                                 <span>정밀검사</span>
-                                <div>객관적인 상태 파악을 위한<br>과학적 심리 검사</div>
+                                <div>객관적인 상태 파악을 위한 <br>과학적 심리 검사</div>
                             </div>
                         </div>
     
                         <div class="sect2-cont-indi order3">
                             <div class="sect2-cont--deco-nums"><span>0</span> <span>3</span></div>
                             <span class="sect2-cont--deco-circle"></span>
-                            <div class="sect2-cont--txt-set opacity0">
+                            <div class="sect2-cont--txt-set">
                             <span>맞춤치료</span>
-                            <div>약물치료 및 인지행동치료 등<br>개인별 솔루션</div>
+                            <div>약물치료 및 인지행동치료 등 <br>개인별 솔루션</div>
                         </div>
                         </div>
     
                         <div class="sect2-cont-indi order4">
                             <div class="sect2-cont--deco-nums"><span>0</span> <span>4</span></div>
                             <span class="sect2-cont--deco-circle"></span>
-                            <div class="sect2-cont--txt-set opacity0">
+                            <div class="sect2-cont--txt-set">
                                 <span>사후관리</span>
-                                <div>지속적인 상담을 통한<br>마음의 자생력회복</div>
+                                <div>지속적인 상담을 통한 <br>마음의 자생력회복</div>
                             </div>
                         </div>
                     </div>
@@ -729,7 +778,9 @@
                         <ul class="sect4--txt-set--cont">
                             <li>
                                 <span>주소</span>
-                                <div>서울특별시 OO구 OO로 123 (OO빌딩 4층)</div>
+                                <div class="forWrap">
+                                    <span>서울특별시 OO구 OO로 123 </span><span>(OO빌딩 4층)</span>
+                                </div>
                             </li>
 
                             <li>
@@ -748,7 +799,10 @@
 
                             <li>
                                 <span>주차안내</span>
-                                <div>건물 내 지하 주차장 이용 가능 (최대 2시간 무료)</div>
+                                <div class="forWrap">
+                                    <span>건물 내 지하 주차장 이용 가능 </span>
+                                    <span>(최대 2시간 무료)</span>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -784,22 +838,24 @@
                                 <span>상호명</span>
                                 <span>온밤정신건강의학과</span>
                             </div>
-                            <span class="divider"></span>
+                            
                             <div>
+                                <span class="divider"></span>
                                 <span>대표자</span>
                                 <span>김OO</span>
                             </div>
-                            <span class="divider"></span>
+                           
                             <div>
+                                <span class="divider"></span>
                                 <span>사업자번호</span>
                                 <span>123-45-6789</span>
                             </div>
-                            <span class="divider"></span>
+                            
                             <div>
+                                <span class="divider"></span>
                                 <span>문의전화</span>
                                 <span>02-1234-5678</span>
                             </div>
-                            <span class="divider"></span>
                         </div>
                     </div>
 

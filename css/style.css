@@ -3,6 +3,7 @@
 @import url('./setting.css');
 @import url('./variable.css');
 
+*{-webkit-tap-highlight-color: transparent;}
 .wrap{max-width: 1920px; margin: 0 auto;}
 
 /* 사이드메뉴 */
@@ -25,6 +26,8 @@ ul.side-menu--gnb{
     padding:20px var(--vw-40px);
     
     transition: right .5s ease-in-out;
+    user-select: none;
+
 }
 .side-menu--gnb-li{width: fit-content; opacity: 0;}
 .side-menu--gnb-li > a{
@@ -194,7 +197,7 @@ ul.header--gnb{display: flex; gap: var(--vw-40px); position: relative; user-sele
 .accordion--cont > .row-align{display: flex; gap: var(--vw-100px); align-items: end;}
 .accordion--cont-quest{display: flex; flex-direction: column; gap: clamp(13px, 0.83vw, 16px); flex-grow: 1;}
 .accordion--cont-quest > li {display: flex; gap: 8px; align-items: center;}
-.accordion--cont-quest > li > input{width: 16px; height: 16px; accent-color:#fff;}
+.accordion--cont-quest > li > input{width: 16px; height: 16px; accent-color:rgba(1,1,1,0.1);}
 /* .accordion--cont-quest > li > input:checked{box-shadow: 0px 0px 1px var(--bk111);} */
 .accordion--cont-quest > li > label{font-size: var(--fz18); line-height: 1.4; color: var(--bk333);}
 .accordion--cont-result{display: flex; flex-direction: column; gap: 8px;}

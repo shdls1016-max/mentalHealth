@@ -108,8 +108,22 @@ sideMenuLis.forEach((li)=>{
                 e.preventDefault();
                 e.stopPropagation();
 
-                sideMenuLis.forEach(l => l.children[1].classList.remove('db'))
-                lnb.classList.add('db');
+                const isOpen = lnb.classList.contains('db');
+
+                sideMenuLis.forEach(otherLi =>{
+                    if(otherLi !== li){  //내가 클릭한 li가 아니면(내가 클릭한 것의 형제들만 통과)
+                        const otherLnb = otherLi.children[1];
+                        if(otherLnb){
+                            otherLnb.classList.remove('db');
+                        }
+                    }
+                });
+
+                if(isOpen){   //내가 클릭한 li는 여기서 조절
+                    lnb.classList.remove('db');
+                } else {
+                    lnb.classList.add('db');
+                }
             }
            
         })

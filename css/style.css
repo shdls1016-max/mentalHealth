@@ -5,6 +5,57 @@
 
 .wrap{max-width: 1920px; margin: 0 auto;}
 
+/* 사이드메뉴 */
+.side-menu{
+    position: fixed; top: 0; right: 0; z-index: 30;
+    width: 100%; height: 100%;
+    background: rgba(1, 1, 1, 0.4);
+    backdrop-filter:blur(4px) ;
+    opacity: 0; visibility: hidden;
+    transition: opacity .4s, visibility .4s;
+}
+
+.side-menu > button{position: fixed; right: 30px; top: 34px; padding: 4px; cursor: pointer; opacity: 0; transition: opacity .6s;}
+.side-menu > button > svg{width: 20px; height: 20px; stroke: #fff;}
+
+ul.side-menu--gnb{
+    background: var(--main-color);
+    width: 40%; height: 100%;
+    position: fixed; top: 0; right: -100%;
+    padding:20px var(--vw-40px);
+    
+    transition: right .5s ease-in-out;
+}
+.side-menu--gnb-li{width: fit-content; opacity: 0;}
+.side-menu--gnb-li > a{
+    font-size: var(--fz18); color: var(--wh1); white-space: nowrap; 
+    padding: 10px; width: 90px; 
+    box-sizing: border-box; display: inline-block; 
+}
+.side-menu--lnb{display: none; }
+.side-menu--lnb.db {display: block !important;}
+.side-menu--lnb > li > a{
+    white-space: nowrap; font-size:16px; color: #f9f5ee;
+    width: fit-content; padding:5px 20px; display: inline-block; 
+    position: relative;
+}
+.side-menu--lnb > li > a::after{content: ''; width: 4px; height: 4px; border-radius: 4px; background: transparent; position: absolute; left: 6px; top: calc(50% - 2px); }
+
+@media (hover: hover) and (pointer: fine){
+.side-menu--gnb-li:hover .side-menu--lnb{display: block; }
+.side-menu--lnb:hover > li > a {color: #fff;}
+.side-menu--lnb > li:hover > a::after{background: #fff;}
+}
+
+
+.side-menu.active{opacity: 1; visibility: visible; }
+.side-menu.active > ul.side-menu--gnb{right: 0;}
+.side-menu.active .side-menu--gnb-li{opacity: 1;}
+.side-menu.active > button{opacity: 1; transition: opacity .6s;}
+
+
+
+
 /* 헤더 */
 header.c-white .header--gnb-li > a{color: var(--wh1);}
 header.c-white > .header--icon-set > button > svg{stroke:var(--wh1)}
@@ -326,7 +377,11 @@ ul.sect4--txt-set--cont{padding-left: 4px;}
 }
 
 @media screen and (max-width : 810px){
-    /* 햄버거 만들기 */
+    /* 햄버거 메뉴 */
+    ul.side-menu--gnb{width: 100%; box-sizing: border-box;}
+
+
+
     ul.header--gnb{display: none;}
 
     .swiper-pagination, .swiper-button-prev, .swiper-button-next{

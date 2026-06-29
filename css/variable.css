@@ -57,6 +57,9 @@
 
 
 /* js위한 클래스토글 */
+html{scrollbar-gutter: stable;}
+.scroll-lock{overflow: hidden;}
+
 .rotate180_effect{transform: rotate(180deg); transition: transform .3s;}
 .rotate360_effect{transform: rotate(360deg); transition: transform .3s;}
 

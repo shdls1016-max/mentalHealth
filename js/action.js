@@ -24,6 +24,7 @@ function initSwiper(){
 
         autoplay: {
         delay: 5000,
+        disableOnIneraction : false,
         },
         });
     }
@@ -36,6 +37,85 @@ function initSwiper(){
 
 initSwiper();
 window.addEventListener('resize', initSwiper);
+
+
+/* 햄버거 */
+const hamburger = document.querySelector('.header--icon-set').children[1];
+const menuModal = document.querySelector('.side-menu');
+const sideMenuLis = document.querySelectorAll('.side-menu--gnb-li');
+const closeSideMenuBtn = menuModal.children[1];
+
+
+
+hamburger.addEventListener('click', ()=>{
+    menuModal.classList.add('active');
+    document.body.classList.add('scroll-lock');
+
+    if(menuModal.classList.contains('active') && mySwiper !== undefined){
+        mySwiper.autoplay.stop();
+        mySwiper.allowTouchMove = false;
+    } 
+})
+
+closeSideMenuBtn.addEventListener('click', ()=>{
+    menuModal.classList.remove('active');
+    document.body.classList.remove('scroll-lock');
+
+    sideMenuLis.forEach((li)=>{
+        if(li.children[1] && li.children[1].classList.contains('db')){
+            li.children[1].classList.remove('db');
+        }
+    })
+
+    if(!menuModal.classList.contains('active') && mySwiper !== undefined){
+        mySwiper.allowTouchMove = true;
+        mySwiper.update();
+        mySwiper.autoplay.start();
+    }
+})
+
+
+menuModal.addEventListener('click', (e)=>{
+    e.stopPropagation();
+
+    if(menuModal.classList.contains('active') && menuModal === e.target){
+        menuModal.classList.remove('active');
+        document.body.classList.remove('scroll-lock');
+
+        sideMenuLis.forEach(li => {
+            if(li.children[1] && li.children[1].classList.contains('db')){
+                li.children[1].classList.remove('db');
+            }
+        });
+
+        if(!menuModal.classList.contains('active') && mySwiper !== undefined){
+            mySwiper.allowTouchMove = true;
+            mySwiper.update();
+            mySwiper.autoplay.start();
+        }
+    }
+})
+
+
+/* 아코디언처럼 만들기 하나 누르면 기존거 닫히게 */
+sideMenuLis.forEach((li)=>{
+    const gnbA = li.children[0];
+    const lnb = li.children[1];
+
+    if(gnbA && lnb){
+        gnbA.addEventListener('click', (e)=>{
+            if(window.matchMedia('(hover:none)').matches){
+                e.preventDefault();
+                e.stopPropagation();
+
+                sideMenuLis.forEach(l => l.children[1].classList.remove('db'))
+                lnb.classList.add('db');
+            }
+           
+        })
+    }
+})
+
 
 
 

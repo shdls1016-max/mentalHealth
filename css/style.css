@@ -292,7 +292,6 @@ ul.footer--info-box--links > li > a{font-size: 16px; font-weight: 600; color: va
 .footer--openTime{user-select: none;}
 .footer--openTime > span{font-size: 16px; color: var(--wh2); margin-bottom: 1.2rem; display: inline-block;}
 .footer--openTime > div{display: grid; grid-template-rows: 1fr auto;  gap: 10px;}
-.footer--openTime > div > div{}
 .footer--openTime > div > div > span:nth-of-type(1){font-size: var(--fz18); color: var(--wh2);}
 .footer--openTime > div > div > span:nth-of-type(2){font-size: var(--fz18); color: var(--wh1);}
 

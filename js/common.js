@@ -9,11 +9,6 @@ const closeSideMenuBtn = menuModal.children[1];
 hamburger.addEventListener('click', ()=>{
     menuModal.classList.add('active');
     document.body.classList.add('scroll-lock');
-
-    if(menuModal.classList.contains('active') && mySwiper !== undefined){
-        mySwiper.autoplay.stop();
-        mySwiper.allowTouchMove = false;
-    } 
 })
 
 closeSideMenuBtn.addEventListener('click', ()=>{
@@ -26,11 +21,6 @@ closeSideMenuBtn.addEventListener('click', ()=>{
         }
     })
 
-    if(!menuModal.classList.contains('active') && mySwiper !== undefined){
-        mySwiper.allowTouchMove = true;
-        mySwiper.update();
-        mySwiper.autoplay.start();
-    }
 })
 
 
@@ -46,12 +36,6 @@ menuModal.addEventListener('click', (e)=>{
                 li.children[1].classList.remove('db');
             }
         });
-
-        if(!menuModal.classList.contains('active') && mySwiper !== undefined){
-            mySwiper.allowTouchMove = true;
-            mySwiper.update();
-            mySwiper.autoplay.start();
-        }
     }
 })
 

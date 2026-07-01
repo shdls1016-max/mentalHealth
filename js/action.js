@@ -31,7 +31,7 @@ function initSwiper(){
     else if (windowWidth <= 810 && mySwiper !== undefined){
         mySwiper.slideTo(0,0);
         mySwiper.destroy(true, true);
-        mySwiper = undefind;
+        mySwiper = undefined;
     }
 }
 
@@ -73,7 +73,6 @@ closeSideMenuBtn.addEventListener('click', ()=>{
         mySwiper.autoplay.start();
     }
 })
-
 
 menuModal.addEventListener('click', (e)=>{
     e.stopPropagation();
@@ -129,8 +128,6 @@ sideMenuLis.forEach((li)=>{
         })
     }
 })
-
-
 
 
 

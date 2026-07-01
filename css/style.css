@@ -142,7 +142,6 @@ ul.header--gnb{display: flex; gap: var(--vw-40px); position: relative; user-sele
 
 
 
-
 /* 히어로 */
 /* 공통 스타일 유지 */
 .hero {width: 100%; height: 90vh; background-size: cover; background-position: left;}
@@ -252,7 +251,7 @@ position: absolute; top: 43%; left: 0; border-radius: 2px;}
 .sect3 > .row-align > div{background: var(--main-color); align-items: center;}
 .sect3--txt-set{display: flex; flex-direction: column; gap: var(--title-gap); justify-content: center; height: 100%; /* padding-left: var(--vw-100px); */ padding-right: var(--vw-40px); user-select: none;
 margin-left: calc((100vw - var(--vw-1600px))/2);}
-.sect3--txt-set--title{font-family: 'NanumMyeongjoBold'; font-size: var(--sectionTitle); display: inline-block;}
+.sect3--txt-set--title{font-family: 'NanumMyeongjoBold'; font-size: var(--sectionTitle); display: inline-block; white-space: nowrap;}
 .sect3--txt-set--cont{display: flex; flex-direction: column; gap: clamp(13px, 0.83vw, 16px);; font-size: var(--fz20); line-height: 1.6; color: var(--bk333);}
 
 .sect3--img-box{height: fit-content;}
@@ -292,7 +291,6 @@ ul.footer--info-box--links > li > a{font-size: 16px; font-weight: 600; color: va
 .footer--openTime{user-select: none;}
 .footer--openTime > span{font-size: 16px; color: var(--wh2); margin-bottom: 1.2rem; display: inline-block;}
 .footer--openTime > div{display: grid; grid-template-rows: 1fr auto;  gap: 10px;}
-.footer--openTime > div > div{}
 .footer--openTime > div > div > span:nth-of-type(1){font-size: var(--fz18); color: var(--wh2);}
 .footer--openTime > div > div > span:nth-of-type(2){font-size: var(--fz18); color: var(--wh1);}
 

@@ -1,3 +1,5 @@
+/* 서브공통, 브래드크럼 */
+
 const breadgnb = document.querySelector('.breadcrumb--current-gnb');
 const breadlnb = document.querySelector('.breadcrumb--current-lnb');
 
@@ -28,3 +30,28 @@ if(breadgnb && breadlnb){
     })
     
 }
+
+
+/* 서브1-2 둘러보기 기능 */
+const selectedImgTag = document.querySelector('.sub1-2cont--big').children[0];
+const selectedImg = document.querySelector('.sub1-2cont--big').children[1];
+const forselectList = document.querySelectorAll('.sub1-2cont--smalls > li');
+
+forselectList.forEach((liImg)=>{
+    liImg.addEventListener('click', (e)=>{
+        const forchangeTag= liImg.children[0].getAttribute('alt');
+        const forchangeSrc= liImg.children[0].getAttribute('src');
+        const changeTag = forchangeTag.slice(0,-5);
+        
+        forselectList.forEach((li)=>{
+            li.classList.remove('selected');
+        })
+
+        selectedImgTag.textContent = changeTag;
+        selectedImg.setAttribute('src', forchangeSrc);
+        liImg.classList.add('selected');
+
+        
+    })
+
+})

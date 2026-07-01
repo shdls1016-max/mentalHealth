@@ -70,6 +70,31 @@ background: var(--wh1); border: 1px solid var(--bd1); border-radius: 6px; overfl
 
 
 
+/* 서브1-2 컨텐츠 */
+.sub1-2cont{display: flex; gap: var(--vw-40px);}
+.sub1-2cont--big{position: relative; max-width: 1326px; height: auto; width: 69vw;}
+.sub1-2cont--big > span{display: inline-block; font-size: var(--fz20); color: var(--bk333); padding: 1rem 1.2rem; border-radius: 8px; background: rgba(255, 255, 255, 0.4); position: absolute; top: 1.25vw; left: 1.25vw;}
+.sub1-2cont--big > img{width: 100%; height: auto; object-fit: cover; object-position: center;}
+.sub1-2cont--smalls{display: flex; flex-direction: column; gap: 8px; justify-content: space-between; align-items: center;}
+.sub1-2cont--smalls > li{max-width: 233px; width: 12.13vw; height: fit-content; border: 2px solid transparent; box-sizing: border-box; display: flex;}
+.sub1-2cont--smalls > li.selected{border: 2px solid var(--bk555); box-sizing: border-box;}
+.sub1-2cont--smalls > li > img{width: 100%; height: auto; object-fit: cover; object-position: center; display: block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ///////////////////////////
      반응형
 /////////////////////////// */
@@ -88,7 +113,8 @@ background: var(--wh1); border: 1px solid var(--bd1); border-radius: 6px; overfl
 
 /* fz20 */
 .sub1-1cont--name > span:nth-of-type(1),
-.sub1-1cont--introduce > span{font-size: clamp(var(--fz20-min),var(--fz20-mid),var(--fz20));}
+.sub1-1cont--introduce > span,
+.sub1-2cont--big > span{font-size: clamp(var(--fz20-min),var(--fz20-mid),var(--fz20));}
 
 /* fz18 */
 .sub1-1cont--introduce > div,
@@ -130,4 +156,12 @@ background: var(--wh1); border: 1px solid var(--bd1); border-radius: 6px; overfl
 .sub1-1cont--introduce{line-height: 1.6; white-space: nowrap;}
 .sub1-1cont--introduce > span > br{display: block;}
 .sub1-1cont--career{gap: 1.6rem;}
+
+
+.sub1-2cont{display: flex; flex-direction: column-reverse; gap: var(--vw-40px); }
+.sub1-2cont--big{width: 100%;}
+.sub1-2cont--big > span{padding: 6px 8px;}
+.sub1-2cont--smalls{display: flex; flex-direction: row; gap: 8px; justify-content: space-between;}
 }
+.sub1-2cont--smalls > li{flex-grow: 1;}
+

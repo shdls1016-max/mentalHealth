@@ -129,8 +129,9 @@ ul.header--gnb{display: flex; gap: var(--vw-40px); position: relative; user-sele
     opacity: 0;
     position: absolute; top: 150%; left: -2%;
     height: 0%; width: 104%;    
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(6px);
+    border: 1px solid var(--bg-f6);
     border-radius: 8px;
     box-shadow: 
     inset 1px 2px 2px rgba(255, 255, 255, 0.04),

@@ -354,6 +354,8 @@ ul.footer--info-box--links > li > a,
 
 
 @media screen and (max-width : 1180px){
+ul.header--gnb{display: none;}
+
 .hero--float-box-txt{gap: 16px;}
 /* .hero--float-box-txt2 > span:nth-of-type(1){font-size: 40px;}
  */
@@ -380,10 +382,6 @@ ul.sect4--txt-set--cont{padding-left: 4px;}
 @media screen and (max-width : 810px){
     /* 햄버거 메뉴 */
     ul.side-menu--gnb{width: 100%; box-sizing: border-box;}
-
-
-
-    ul.header--gnb{display: none;}
 
     .swiper-pagination, .swiper-button-prev, .swiper-button-next{
         display: none !important;}

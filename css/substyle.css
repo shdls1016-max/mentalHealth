@@ -196,14 +196,6 @@ ul.sub3cont--sect2--cont{display: flex; flex-direction: column; gap: 1rem; font-
 .sub4-3cont--table--tr .td4 {min-width:90px; text-align: right;}
 .sub4-3cont--info {font-size: var(--fz14); line-height: 1.4; color: var(--bk555); padding: 20px 8px;}
 
-.sub3cont--sect1--cont{font-size: var(--fz18); color: var(--bk333); line-height: 1.6;}
-
-ul.sub3cont--sect2--cont{display: flex; flex-direction: column; gap: 1rem; font-size: var(--fz18); color: var(--bk333); line-height: 1.4;}
-
-.sub3cont--sect3--cont{display: flex; flex-direction: column; gap: clamp(16px, 1.66vw , 32px);}
-.sub3cont--sect3--cont > div > span{font-size: var(--fz20); color: var(--bk111); position: relative; text-indent: 10px; display: inline-block;}
-.sub3cont--sect3--cont > div > span::before{content: ''; width: 4px;  height: 4px; background: var(--main-color); border-radius: 5px; position: absolute; top: 8px; left: 0;}
-.sub3cont--sect3--cont > div > div{font-size: var(--fz20); color: var(--bk333); line-height: 1.4; margin-top: 8px;}
 
 
 
